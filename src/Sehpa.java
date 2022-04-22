@@ -45,6 +45,6 @@ public class Sehpa extends Mobilya implements Dortgen{
 
     @Override
     public String toString() {
-        return super.toString() + String.format("[ %5.2f x %5.2f x %5.2f]",genislik,derinlik,getYukseklik());
+        return String.format("%s [ %5.2f x %5.2f x %5.2f]",super.toString(),genislik,derinlik,getYukseklik());
     }
 }

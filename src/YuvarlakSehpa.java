@@ -35,6 +35,6 @@ public class YuvarlakSehpa extends Mobilya implements Daire{
 
     @Override
     public String toString() {
-        return super.toString()+ String.format("[ %5.2f x %5.2f ]",yaricap,getYukseklik());
+        return String.format("%s [ %5.2f x %5.2f ]",super.toString(),yaricap,getYukseklik());
     }
 }
