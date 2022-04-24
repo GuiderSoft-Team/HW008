@@ -1,7 +1,7 @@
 public class YuvarlakSehpa extends Mobilya implements Daire {
     private double yaricap;
-    YuvarlakSehpa() {}
-    YuvarlakSehpa(String aciklama, double yaricap, double yukseklik, boolean kapalimi) {
+    public YuvarlakSehpa() {}
+    public YuvarlakSehpa(String aciklama, double yaricap, double yukseklik, boolean kapalimi) {
         super(aciklama, yukseklik, kapalimi);
         setYaricap(yaricap);
     }

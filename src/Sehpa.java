@@ -2,10 +2,10 @@ public class Sehpa extends Mobilya implements Dortgen {
     private double genislik;
     private double derinlik;
 
-    Sehpa() {
+    public Sehpa() {
     }
 
-    Sehpa(String aciklama, double genislik, double derinlik, double yukseklik, boolean kapalimi) {
+    public Sehpa(String aciklama, double genislik, double derinlik, double yukseklik, boolean kapalimi) {
         super(aciklama, yukseklik, kapalimi);
 
 

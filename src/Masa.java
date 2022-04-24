@@ -1,9 +1,9 @@
 public class Masa extends Mobilya implements Dortgen {
    private double genislik;
    private double derinlik;
-    Masa() {}
+    public Masa() {}
 
-    Masa(String aciklama, double genislik, double derinlik, double yukseklik, boolean kapalimi) {
+    public Masa(String aciklama, double genislik, double derinlik, double yukseklik, boolean kapalimi) {
         super(aciklama,yukseklik,kapalimi);
         setGenislik(genislik);
         setDerinlik(derinlik);

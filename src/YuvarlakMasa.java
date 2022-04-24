@@ -1,7 +1,7 @@
 public class YuvarlakMasa extends Mobilya implements Daire {
     private double yaricap;
-    YuvarlakMasa() {}
-    YuvarlakMasa(String aciklama, double yaricap, double yukseklik, boolean kapalimi) {
+    public YuvarlakMasa() {}
+    public YuvarlakMasa(String aciklama, double yaricap, double yukseklik, boolean kapalimi) {
         super(aciklama, yukseklik, kapalimi);}
 
     @Override
