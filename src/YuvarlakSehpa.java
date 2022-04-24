@@ -9,13 +9,13 @@ public class YuvarlakSehpa extends Mobilya implements Daire {
 
     public YuvarlakSehpa(String aciklama, double yaricap, double yukseklik, boolean kapaliMi) {
         super(aciklama, yukseklik, kapaliMi);
-        this.yaricap = yaricap;
+        setYaricap(yaricap);
     }
 
 
     @Override
     public String toString() {
-        return super.toString() + String.format("[%.2f x %.2f]", yaricap, yukseklik);
+        return  String.format("%s [%.2f x %.2f]",super.toString(), yaricap, yukseklik);
 
     }
 
@@ -26,7 +26,7 @@ public class YuvarlakSehpa extends Mobilya implements Daire {
 
     @Override
     public void setYaricap(double yaricap) {
-        this.yaricap = yaricap;
+        this.yaricap =yaricap<0?0:yaricap;
     }
 
     @Override

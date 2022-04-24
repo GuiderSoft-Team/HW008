@@ -8,13 +8,13 @@ public class Sehpa extends Mobilya implements Dortgen {
 
     public Sehpa(String aciklama, double genislik, double yukseklik, boolean kapaliMi) {
         super(aciklama, yukseklik, kapaliMi);
-        this.genislik = genislik;
+        setGenislik(genislik);
 
     }
 
     @Override
     public String toString() {
-        return super.toString()+String.format("[%.2f x %.2f x %.2f]",genislik, derinlik,yukseklik);
+        return String.format("%s [%.2f x %.2f x %.2f]",super.toString(), genislik, derinlik,yukseklik);
     }
 
     @Override
@@ -29,12 +29,12 @@ public class Sehpa extends Mobilya implements Dortgen {
 
     @Override
     public void setGenislik(double genislik) {
-        this.genislik = genislik;
+        this.genislik =genislik<0?0: genislik;
     }
 
     @Override
     public void setDerinlik(double derinlik) {
-        this.derinlik = derinlik;
+        this.derinlik =derinlik<0?0: derinlik;
     }
 
     @Override

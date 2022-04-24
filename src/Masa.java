@@ -24,12 +24,12 @@ public class Masa extends Mobilya implements Dortgen {
 
     @Override
     public void setGenislik(double genislik) {
-        this.genislik = genislik;
+        this.genislik =genislik<0?0: genislik;
     }
 
     @Override
     public void setDerinlik(double derinlik) {
-        this.derinlik = derinlik;
+        this.derinlik =derinlik<0?0: derinlik;
     }
 
     @Override
@@ -48,6 +48,6 @@ public class Masa extends Mobilya implements Dortgen {
 
     @Override
     public String toString() {
-        return super.toString()+ String.format("[%.2f x %.2f x %.2f]",genislik,derinlik,yukseklik);
+        return String.format("[%s %.2f x %.2f x %.2f]",super.toString(), genislik,derinlik,yukseklik);
     }
 }

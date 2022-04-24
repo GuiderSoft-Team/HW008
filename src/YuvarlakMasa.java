@@ -8,24 +8,24 @@ public class YuvarlakMasa extends Mobilya implements Daire {
 
     public YuvarlakMasa(String aciklama, double yaricap, double yukseklik, boolean kapaliMi) {
         super(aciklama, yukseklik, kapaliMi);
-        this.yaricap = yaricap;
+        setYaricap(yaricap);
     }
 
     @Override
     public String toString() {
-        return super.toString()+String.format("[%2.f x %2.f]",yaricap,yukseklik);
+        return String.format("%s [%2.f x %2.f]",super.toString(),yaricap,yukseklik);
 
     }
 
 
     @Override
     public double getYaricap() {
-        return 0;
+        return yaricap;
     }
 
     @Override
     public void setYaricap(double yaricap) {
-
+        this.yaricap =yaricap<0?0:yaricap;
     }
 
     @Override
@@ -44,6 +44,5 @@ public class YuvarlakMasa extends Mobilya implements Daire {
     public double hacimHesapla() {
         return Math.round((PI * yaricap * yaricap * yukseklik));
     }
-
 
 }
